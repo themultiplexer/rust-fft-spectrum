@@ -1,0 +1,8 @@
+[package]
+name = "fft"
+version = "0.1.0"
+authors = ["Joshua Rutschmann <joshua@rutschmann.tech>"]
+edition = "2018"
+
+[dependencies]
+rust_gpiozero = "0.1.0"
