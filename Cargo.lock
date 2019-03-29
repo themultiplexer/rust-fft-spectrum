@@ -69,6 +69,7 @@ dependencies = [
  "linux-embedded-hal 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "nb 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "rust_gpiozero 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustfft 3.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -157,6 +158,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "num-complex"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "num-integer"
+version = "0.1.39"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "num-traits"
+version = "0.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "rust_gpiozero"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -170,6 +192,18 @@ version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "semver 0.1.20 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "rustfft"
+version = "3.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "num-complex 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-integer 0.1.39 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "strength_reduce 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "transpose 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -188,12 +222,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "strength_reduce"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "sysfs_gpio"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "nix 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
+
+[[package]]
+name = "transpose"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "void"
@@ -225,10 +269,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum nix 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "b7fd5681d13fda646462cfbd4e5f2051279a89a544d50eb98c365b507246839f"
 "checksum nix 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d37e713a259ff641624b6cb20e3b12b2952313ba36b6823c0f16e6cfd9e5de17"
 "checksum nix 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "7a7bb1da2be7da3cbffda73fc681d509ffd9e665af478d2bee1907cee0bc64b2"
+"checksum num-complex 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "107b9be86cd2481930688277b675b0114578227f034674726605b8a482d8baf8"
+"checksum num-integer 0.1.39 (registry+https://github.com/rust-lang/crates.io-index)" = "e83d528d2677f0518c570baf2b7abdcf0cd2d248860b68507bdcb3e91d4c0cea"
+"checksum num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0b3a5d7cc97d6d30d8b9bc8fa19bf45349ffe46241e8816f50f62f6d6aaabee1"
 "checksum rust_gpiozero 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a6384b6f14fdbadf3df3760167923abef72d7befde0d653b2399add9aa0387d0"
 "checksum rustc_version 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)" = "c5f5376ea5e30ce23c03eb77cbe4962b988deead10910c372b226388b594c084"
+"checksum rustfft 3.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9c86a9dc178e87c7933f6e79bb93fa26c27548d551ab022b7f24ee2117aa4cb3"
 "checksum semver 0.1.20 (registry+https://github.com/rust-lang/crates.io-index)" = "d4f410fedcf71af0345d7607d246e7ad15faaadd49d240ee3b24e5dc21a820ac"
 "checksum spidev 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "1ba01d3ef92a37e898fecac76cd3e1b33c999395e2d70787608d9678c4293e04"
+"checksum strength_reduce 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "a2c75312b4c67dfa864c7cb987133c930c9f18829fb918ce5d9bca4a0532ec72"
 "checksum sysfs_gpio 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "3d68f2cae3c7d39f54ce8a858cc31ffb01974744ee65e5b4999b6037cd691e3f"
+"checksum transpose 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "643e21580bb0627c7bb09e5cedbb42c8705b19d012de593ed6b0309270b3cd1e"
 "checksum void 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d"
 "checksum winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "167dc9d6949a9b857f3451275e911c3f44255842c1f7a76f33c55103a909087a"
